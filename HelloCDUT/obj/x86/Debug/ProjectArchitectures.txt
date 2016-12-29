@@ -1,0 +1,2 @@
+H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT.Core\HelloCDUT.Core.csproj;x86
+H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\HelloCDUT.csproj;x86

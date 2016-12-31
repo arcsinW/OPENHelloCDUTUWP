@@ -1,2 +1,2 @@
-# OPENHelloCDUTUWP
-HelloCDUT client of Windows Phone
+# OpenHelloCDUTUWP
+HelloCDUT client for Universal Windows Platform

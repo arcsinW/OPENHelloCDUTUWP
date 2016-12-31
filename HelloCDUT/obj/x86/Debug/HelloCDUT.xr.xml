@@ -3,6 +3,7 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="AccountAndPassword" />
     <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="Errors" />
     <RootPropertyPathName Name="Account" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -17,10 +18,21 @@
       <RootProperty Name="Color" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Thickness" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontStyle" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Style" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Text" />
       <RootProperty Name="Style" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
       <RootProperty Name="Template" />
@@ -36,6 +48,7 @@
       <RootProperty Name="Style" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Content" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
@@ -119,16 +132,6 @@
       <RootProperty Name="Duration" />
       <RootProperty Name="To" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="FontStyle" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>
@@ -174,21 +177,35 @@
     </RootType>
     <RootType FullName="HelloCDUT.Core.ViewModel.LoginPageViewModel" />
     <RootType FullName="HelloCDUT.Pages.CoursePage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Children" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
+      <RootProperty Name="Header" />
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Password" />
     </RootType>
+    <RootType FullName="HelloCDUT.Pages.FindBackPwdPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Children" />
+    </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
     </RootType>
     <RootType FullName="HelloCDUT.Pages.LoginPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Pivot" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView" />
     <RootType FullName="HelloCDUT.Pages.MainPage" />
+    <RootType FullName="HelloCDUT.Pages.SignUpPage" />
     <RootType FullName="HelloCDUT.Pages.WelcomePage" />
   </Roots.RootTypes>
 </Roots>

@@ -132,35 +132,41 @@ namespace HelloCDUT.HelloCDUT_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[13];
+            _typeNameTable = new string[16];
             _typeNameTable[0] = "HelloCDUT.Core.ViewModel.LoginPageViewModel";
             _typeNameTable[1] = "HelloCDUT.Core.ViewModel.ViewModelBase";
             _typeNameTable[2] = "Windows.UI.Xaml.DependencyObject";
             _typeNameTable[3] = "HelloCDUT.Core.Model.Input.AccountAndPassword";
-            _typeNameTable[4] = "HelloCDUT.Core.Model.Base.ModelBase";
-            _typeNameTable[5] = "Object";
-            _typeNameTable[6] = "Boolean";
-            _typeNameTable[7] = "HelloCDUT.Pages.CoursePage";
-            _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[9] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[10] = "HelloCDUT.Pages.LoginPage";
-            _typeNameTable[11] = "HelloCDUT.Pages.MainPage";
-            _typeNameTable[12] = "HelloCDUT.Pages.WelcomePage";
+            _typeNameTable[4] = "HelloCDUT.Core.Helper.VerifiableBase";
+            _typeNameTable[5] = "HelloCDUT.Core.Model.Base.ModelBase";
+            _typeNameTable[6] = "Object";
+            _typeNameTable[7] = "Boolean";
+            _typeNameTable[8] = "HelloCDUT.Pages.CoursePage";
+            _typeNameTable[9] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[10] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[11] = "HelloCDUT.Pages.FindBackPwdPage";
+            _typeNameTable[12] = "HelloCDUT.Pages.LoginPage";
+            _typeNameTable[13] = "HelloCDUT.Pages.MainPage";
+            _typeNameTable[14] = "HelloCDUT.Pages.SignUpPage";
+            _typeNameTable[15] = "HelloCDUT.Pages.WelcomePage";
 
-            _typeTable = new global::System.Type[13];
+            _typeTable = new global::System.Type[16];
             _typeTable[0] = typeof(global::HelloCDUT.Core.ViewModel.LoginPageViewModel);
             _typeTable[1] = typeof(global::HelloCDUT.Core.ViewModel.ViewModelBase);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.DependencyObject);
             _typeTable[3] = typeof(global::HelloCDUT.Core.Model.Input.AccountAndPassword);
-            _typeTable[4] = typeof(global::HelloCDUT.Core.Model.Base.ModelBase);
-            _typeTable[5] = typeof(global::System.Object);
-            _typeTable[6] = typeof(global::System.Boolean);
-            _typeTable[7] = typeof(global::HelloCDUT.Pages.CoursePage);
-            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[10] = typeof(global::HelloCDUT.Pages.LoginPage);
-            _typeTable[11] = typeof(global::HelloCDUT.Pages.MainPage);
-            _typeTable[12] = typeof(global::HelloCDUT.Pages.WelcomePage);
+            _typeTable[4] = typeof(global::HelloCDUT.Core.Helper.VerifiableBase);
+            _typeTable[5] = typeof(global::HelloCDUT.Core.Model.Base.ModelBase);
+            _typeTable[6] = typeof(global::System.Object);
+            _typeTable[7] = typeof(global::System.Boolean);
+            _typeTable[8] = typeof(global::HelloCDUT.Pages.CoursePage);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[10] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[11] = typeof(global::HelloCDUT.Pages.FindBackPwdPage);
+            _typeTable[12] = typeof(global::HelloCDUT.Pages.LoginPage);
+            _typeTable[13] = typeof(global::HelloCDUT.Pages.MainPage);
+            _typeTable[14] = typeof(global::HelloCDUT.Pages.SignUpPage);
+            _typeTable[15] = typeof(global::HelloCDUT.Pages.WelcomePage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -198,11 +204,13 @@ namespace HelloCDUT.HelloCDUT_XamlTypeInfo
         private object Activate_0_LoginPageViewModel() { return new global::HelloCDUT.Core.ViewModel.LoginPageViewModel(); }
         private object Activate_1_ViewModelBase() { return new global::HelloCDUT.Core.ViewModel.ViewModelBase(); }
         private object Activate_3_AccountAndPassword() { return new global::HelloCDUT.Core.Model.Input.AccountAndPassword(); }
-        private object Activate_4_ModelBase() { return new global::HelloCDUT.Core.Model.Base.ModelBase(); }
-        private object Activate_7_CoursePage() { return new global::HelloCDUT.Pages.CoursePage(); }
-        private object Activate_10_LoginPage() { return new global::HelloCDUT.Pages.LoginPage(); }
-        private object Activate_11_MainPage() { return new global::HelloCDUT.Pages.MainPage(); }
-        private object Activate_12_WelcomePage() { return new global::HelloCDUT.Pages.WelcomePage(); }
+        private object Activate_5_ModelBase() { return new global::HelloCDUT.Core.Model.Base.ModelBase(); }
+        private object Activate_8_CoursePage() { return new global::HelloCDUT.Pages.CoursePage(); }
+        private object Activate_11_FindBackPwdPage() { return new global::HelloCDUT.Pages.FindBackPwdPage(); }
+        private object Activate_12_LoginPage() { return new global::HelloCDUT.Pages.LoginPage(); }
+        private object Activate_13_MainPage() { return new global::HelloCDUT.Pages.MainPage(); }
+        private object Activate_14_SignUpPage() { return new global::HelloCDUT.Pages.SignUpPage(); }
+        private object Activate_15_WelcomePage() { return new global::HelloCDUT.Pages.WelcomePage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -233,57 +241,76 @@ namespace HelloCDUT.HelloCDUT_XamlTypeInfo
                 break;
 
             case 3:   //  HelloCDUT.Core.Model.Input.AccountAndPassword
-                userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("HelloCDUT.Core.Model.Base.ModelBase"));
+                userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("HelloCDUT.Core.Helper.VerifiableBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 4:   //  HelloCDUT.Core.Model.Base.ModelBase
+            case 4:   //  HelloCDUT.Core.Helper.VerifiableBase
+                userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("HelloCDUT.Core.Model.Base.ModelBase"));
+                xamlType = userType;
+                break;
+
+            case 5:   //  HelloCDUT.Core.Model.Base.ModelBase
                 userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_4_ModelBase;
+                userType.Activator = Activate_5_ModelBase;
                 xamlType = userType;
                 break;
 
-            case 5:   //  Object
+            case 6:   //  Object
                 xamlType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  Boolean
+            case 7:   //  Boolean
                 xamlType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  HelloCDUT.Pages.CoursePage
+            case 8:   //  HelloCDUT.Pages.CoursePage
                 userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_CoursePage;
+                userType.Activator = Activate_8_CoursePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  Windows.UI.Xaml.Controls.Page
+            case 9:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  Windows.UI.Xaml.Controls.UserControl
+            case 10:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 10:   //  HelloCDUT.Pages.LoginPage
+            case 11:   //  HelloCDUT.Pages.FindBackPwdPage
                 userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_LoginPage;
+                userType.Activator = Activate_11_FindBackPwdPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  HelloCDUT.Pages.MainPage
+            case 12:   //  HelloCDUT.Pages.LoginPage
                 userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_MainPage;
+                userType.Activator = Activate_12_LoginPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  HelloCDUT.Pages.WelcomePage
+            case 13:   //  HelloCDUT.Pages.MainPage
                 userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_WelcomePage;
+                userType.Activator = Activate_13_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 14:   //  HelloCDUT.Pages.SignUpPage
+                userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_14_SignUpPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 15:   //  HelloCDUT.Pages.WelcomePage
+                userType = new global::HelloCDUT.HelloCDUT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_15_WelcomePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

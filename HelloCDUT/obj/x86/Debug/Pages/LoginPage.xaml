@@ -28,15 +28,29 @@
 
         <Grid Grid.Row="1" Margin="12,24">
             <StackPanel>
-                <TextBox PlaceholderText="用户名" Text="{Binding AccountAndPassword.Account,Mode=TwoWay}" 
+                <TextBox PlaceholderText="用户名" Text="{Binding AccountAndPassword.Account,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
                          Style="{ThemeResource LightTextBoxStyle}"/>
-                <TextBlock>
-                    
-                </TextBlock>
+                <TextBlock Text="{Binding AccountAndPassword.Errors[Account]}" Foreground="Red"/>
+
                 <PasswordBox PlaceholderText="密码" Margin="0,8,0,0"  Password="{Binding AccountAndPassword.Password,Mode=TwoWay}"/>
                 <TextBlock/>
-                <Button x:ConnectionId='3' x:Uid="Login"                                  Margin="0,8,0,0" Style="{StaticResource LightButtonStyle}"/>
+
+                <Grid >
+                    <HyperlinkButton>
+                        <TextBlock Text="Forget password?"/>
+                    </HyperlinkButton>
+
+                    <HyperlinkButton HorizontalAlignment="Right">
+                        <TextBlock Text="Sign up"/>
+                    </HyperlinkButton>
+                </Grid>
+                
+                <Button x:ConnectionId='3' x:Uid="Login"                                  Margin="0,8,0,0" 
+                        Content="Sign in"
+                        Style="{StaticResource LightButtonStyle}"/>
+
             </StackPanel>
+ 
         </Grid>
     </Grid>
 </Page>

@@ -9,32 +9,32 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>5bd83e89-9c38-4138-a215-daca714085ec</PackageIdentityName>
-    <PackageIdentityPublisher>CN=ARCSINX</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=6C0637F1-510E-45BC-90C0-3F7555214A61</PackageIdentityPublisher>
     <IntermediateOutputPath>H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>D34C95C9118EDBC36F87C7AD4A59F315921A7C2687AE8F54B1BA8DBD811E892C</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>5bd83e89-9c38-4138-a215-daca714085ec_1.0.0.0_x86__zv0jk6527kd8r</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>5bd83e89-9c38-4138-a215-daca714085ec_zv0jk6527kd8r!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>5bd83e89-9c38-4138-a215-daca714085ec</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=ARCSINX</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredManifestChecksum>E3765580600B4E0B82B3A32990401A3E350527CF4FC1D9C219FE430FABE4D2FD</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>46918Xsetups.412417B45016C_1.1.0.0_x86__khyyr2zggrj2j</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>46918Xsetups.412417B45016C_khyyr2zggrj2j!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>46918Xsetups.412417B45016C</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=6C0637F1-510E-45BC-90C0-3F7555214A61</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-29T04:23:35.329</Modified>
+      <Modified>2016-12-31T15:40:36.410</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\bin\x86\Debug\HelloCDUT.exe">
       <PackagePath>entrypoint\HelloCDUT.exe</PackagePath>
-      <Modified>2016-12-29T04:23:31.953</Modified>
+      <Modified>2016-12-31T15:40:34.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arcsinx\.nuget\packages\AsyncStackTraceEx\1.0.1.1\lib\win\AsyncStackTraceEx.dll">
       <PackagePath>AsyncStackTraceEx.dll</PackagePath>
@@ -99,6 +99,14 @@
     <AppxPackagedFile Include="C:\Users\arcsinx\.nuget\packages\Microsoft.VisualBasic\10.0.1\lib\netcore50\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
       <Modified>2016-06-11T15:13:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\arcsinx\.nuget\packages\Microsoft.Xaml.Behaviors.Uwp.Managed\2.0.0\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+      <Modified>2016-10-19T09:07:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\arcsinx\.nuget\packages\Microsoft.Xaml.Behaviors.Uwp.Managed\2.0.0\lib\uap10.0\Microsoft.Xaml.Interactivity.dll">
+      <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
+      <Modified>2016-10-19T09:07:18.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arcsinx\.nuget\packages\Newtonsoft.Json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -504,23 +512,276 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T15:15:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\arcsinx\.nuget\packages\WindowsAzure.Messaging.Managed\0.1.7.9\lib\netcore45\Microsoft.WindowsAzure.Messaging.Managed.dll">
+      <PackagePath>Microsoft.WindowsAzure.Messaging.Managed.dll</PackagePath>
+      <Modified>2014-07-30T04:12:22.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT.Core\bin\x86\Debug\HelloCDUT.Core.dll">
       <PackagePath>HelloCDUT.Core.dll</PackagePath>
-      <Modified>2016-12-28T14:07:55.614</Modified>
+      <Modified>2016-12-31T08:53:37.818</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT.Core\bin\x86\Debug\crypto.dll">
       <PackagePath>crypto.dll</PackagePath>
       <Modified>2015-10-25T08:03:09.905</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.scale-100.png">
+      <PackagePath>Assets\AppList\AppList.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:30:40.595</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.scale-125.png">
+      <PackagePath>Assets\AppList\AppList.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:30:51.470</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.scale-150.png">
+      <PackagePath>Assets\AppList\AppList.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:31:03.891</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.scale-200.png">
+      <PackagePath>Assets\AppList\AppList.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:31:30.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.scale-400.png">
+      <PackagePath>Assets\AppList\AppList.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:31:48.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.targetsize-16.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:38:28.638</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.targetsize-24.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:34:05.678</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.targetsize-256.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:33:06.472</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.targetsize-256_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-256_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:33:06.472</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\AppList\AppList.targetsize-48.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:32:38.179</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\BadgeLogo.scale-100.png">
       <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-11-30T05:38:48.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Badge\Badge.scale-100.png">
+      <PackagePath>Assets\Badge\Badge.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T15:39:12.097</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Badge\Badge.scale-125.png">
+      <PackagePath>Assets\Badge\Badge.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T15:38:47.515</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Badge\Badge.scale-150.png">
+      <PackagePath>Assets\Badge\Badge.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T15:38:18.246</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Badge\Badge.scale-200.png">
+      <PackagePath>Assets\Badge\Badge.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T15:37:51.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Badge\Badge.scale-400.png">
+      <PackagePath>Assets\Badge\Badge.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T15:37:10.995</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Large\Large310x310Logo.scale-100.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:27:34.009</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Large\Large310x310Logo.scale-125.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:27:08.428</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Large\Large310x310Logo.scale-150.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:28:13.002</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Large\Large310x310Logo.scale-200.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:28:34.843</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Medium\Medium150x150Logo.scale-100.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:24:54.012</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Medium\Medium150x150Logo.scale-125.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:24:00.402</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Medium\Medium150x150Logo.scale-150.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:25:33.638</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Medium\Medium150x150Logo.scale-200.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:26:06.639</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Medium\Medium150x150Logo.scale-400.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:26:34.640</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Small\Small71x71Logo.scale-100.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-25T06:14:30.707</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Small\Small71x71Logo.scale-125.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:28:49.855</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Small\Small71x71Logo.scale-150.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:28:50.702</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Small\Small71x71Logo.scale-200.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:28:35.991</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Small\Small71x71Logo.scale-400.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:28:36.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <Modified>2016-12-30T06:25:36.132</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\SplashScreen\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:25:36.132</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\SplashScreen\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T15:26:21.246</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\SplashScreen\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T15:29:14.145</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\SplashScreen\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T15:30:14.163</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Square71x71Logo.scale-100.png">
       <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-11-25T06:14:30.707</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Square71x71Logo.scale-125.png">
+      <PackagePath>Assets\Square71x71Logo.scale-125.png</PackagePath>
+      <Modified>2016-12-30T06:28:49.855</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Square71x71Logo.scale-150.png">
+      <PackagePath>Assets\Square71x71Logo.scale-150.png</PackagePath>
+      <Modified>2016-12-30T06:28:50.702</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Square71x71Logo.scale-200.png">
+      <PackagePath>Assets\Square71x71Logo.scale-200.png</PackagePath>
+      <Modified>2016-12-30T06:28:35.991</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Square71x71Logo.scale-400.png">
+      <PackagePath>Assets\Square71x71Logo.scale-400.png</PackagePath>
+      <Modified>2016-12-30T06:28:36.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Store\StoreLogo.scale-100.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-25T05:29:52.996</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Store\StoreLogo.scale-125.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:34:39.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Store\StoreLogo.scale-150.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:35:11.723</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Store\StoreLogo.scale-200.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:35:31.388</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Store\StoreLogo.scale-400.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-31T14:35:50.056</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <Modified>2016-12-30T06:25:29.015</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <Modified>2016-12-30T06:25:29.793</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <Modified>2016-12-30T06:25:30.463</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <Modified>2016-12-30T06:25:28.323</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:25:29.015</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:25:29.793</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:25:30.463</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:25:36.132</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-30T06:25:28.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -528,33 +789,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T09:30:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T09:30:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T09:30:08.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T09:30:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-11-25T05:29:52.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T09:30:08.000</Modified>
+      <Modified>2016-12-30T06:25:36.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -562,7 +813,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\bin\x86\Debug\HelloCDUT.xr.xml">
       <PackagePath>HelloCDUT.xr.xml</PackagePath>
-      <Modified>2016-12-29T04:23:31.669</Modified>
+      <Modified>2016-12-31T08:53:40.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -571,11 +822,11 @@
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-29T04:23:34.757</Modified>
+      <Modified>2016-12-31T15:40:35.742</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Documents\Visual Studio 2015\Projects\HelloCDUT\HelloCDUT\bin\x86\Debug\Core\HelloCDUT.exe">
       <PackagePath>HelloCDUT.exe</PackagePath>
-      <Modified>2016-12-29T04:23:35.298</Modified>
+      <Modified>2016-12-31T15:40:36.405</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

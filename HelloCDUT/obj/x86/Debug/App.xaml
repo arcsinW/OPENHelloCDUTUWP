@@ -25,6 +25,10 @@
             <Thickness x:Key="PagePadding">12,0</Thickness>
             <!--#endregion-->
 
+            <Style x:Key="ThemeColorTextBlock" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{ThemeResource AppThemeColorBrush}"/>
+            </Style>
+            
             <Style x:Key="LightTextBoxStyle" TargetType="TextBox">
                 <Setter Property="Template">
                     <Setter.Value>

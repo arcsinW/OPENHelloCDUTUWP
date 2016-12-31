@@ -130,7 +130,11 @@
     <Compile Include="Model\ResponseBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RSAEncrypt\RSAEncryptHelper.cs" />
+    <Compile Include="Validations\AccountValidation.cs" />
+    <Compile Include="ViewModel\CoursePageViewModel.cs" />
+    <Compile Include="ViewModel\FindBackPwdViewModel.cs" />
     <Compile Include="ViewModel\LoginPageViewModel.cs" />
+    <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <EmbeddedResource Include="Properties\HelloCDUT.Core.rd.xml" />
   </ItemGroup>

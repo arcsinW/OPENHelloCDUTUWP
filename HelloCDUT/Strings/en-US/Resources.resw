@@ -48,4 +48,25 @@
   <data name="AppName.Text" xml:space="preserve">
     <value>Hello CDUT</value>
   </data>
+  <data name="ForgetPwd.Text" xml:space="preserve">
+    <value>Forget password?</value>
+  </data>
+  <data name="SignUp.Text" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="AccountServiceCenter.Text" xml:space="preserve">
+    <value>Account Service Center</value>
+  </data>
+  <data name="ByAAOAccount.Text" xml:space="preserve">
+    <value>By AAO account</value>
+  </data>
+  <data name="ByEmail.Text" xml:space="preserve">
+    <value>By Email</value>
+  </data>
+  <data name="TryFindPwd.Content" xml:space="preserve">
+    <value>Try find back password</value>
+  </data>
+  <data name="GetVerificationCode.Content" xml:space="preserve">
+    <value>Get Verification code</value>
+  </data>
 </root>

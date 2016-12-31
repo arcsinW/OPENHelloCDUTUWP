@@ -9,7 +9,27 @@
 
     <Grid Background="{ThemeResource PageBackgroundColorBrush}">
         <Pivot>
-            
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Text="校园" Style="{ThemeResource ThemeColorTextBlock}"/>
+                </PivotItem.Header>
+
+                <GridView>
+                    
+                </GridView>
+            </PivotItem>
+
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Text="消息" Style="{ThemeResource ThemeColorTextBlock}"/>
+                </PivotItem.Header>
+            </PivotItem>
+
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Text="我" Style="{ThemeResource ThemeColorTextBlock}"/>
+                </PivotItem.Header>
+            </PivotItem>
         </Pivot>
     </Grid>
 </Page>

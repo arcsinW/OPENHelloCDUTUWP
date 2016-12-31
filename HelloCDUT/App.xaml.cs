@@ -8,6 +8,8 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Windows.Networking.PushNotifications;
+using Microsoft.WindowsAzure.Messaging; 
 
 namespace HelloCDUT
 {
@@ -54,13 +56,30 @@ namespace HelloCDUT
 
         #endregion
 
+        private async void InitNotificationAsync()
+        {
+            var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            var hub = new NotificationHub("HelloCDUTNotificationHub", "Endpoint=sb://hellocdutnotification.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=hZCf14UTl3kxd2XZgfuL3nonCKF9TYEaN8AmkMg2RoQ=");
+            var result = await hub.RegisterNativeAsync(channel.Uri);
+
+            if(result.RegistrationId != null)
+            {
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine($"Registration successful : {result.RegistrationId}");
+#endif
+            }
+
+        }
+
+        #region System's Event
+
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
-        { 
+        {
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
@@ -94,6 +113,8 @@ namespace HelloCDUT
                 Window.Current.Activate();
             }
             RegisterExceptionHandlingSynchronizationContext();
+
+            InitNotificationAsync();
         }
 
         /// <summary>
@@ -123,6 +144,9 @@ namespace HelloCDUT
         protected override void OnActivated(IActivatedEventArgs args)
         {
             RegisterExceptionHandlingSynchronizationContext();
-        }
+        } 
+        #endregion
+
+
     }
 }

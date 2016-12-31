@@ -20,13 +20,13 @@ namespace HelloCDUT.Core.Http
             LoginResponse response = await PostDictionary<LoginResponse>(dic);
         } 
 
-        public async void UserLogin(string userName,string userPassword)
+        public async Task<LoginResponse> UserLogin(string userName,string userPassword)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("action", "userLogin");
             dic.Add("user_name", RSAEncryptHelper.PublicEncrypt(userName));
             dic.Add("user_password", RSAEncryptHelper.PublicEncrypt(userPassword));
-            await PostDictionary<LoginResponse>(dic);
+            return await PostDictionary<LoginResponse>(dic);
         }
     }
 }

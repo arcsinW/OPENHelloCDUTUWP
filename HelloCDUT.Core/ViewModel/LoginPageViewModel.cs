@@ -11,14 +11,21 @@ namespace HelloCDUT.Core.ViewModel
 {
     public class LoginPageViewModel : ViewModelBase
     {
-        public AccountAndPassword AccountAndPassword { get; set; } = new AccountAndPassword() { Account = "arcsinw", Password = "1234567" };
+        public AccountAndPassword AccountAndPassword { get; set; } 
+
+        public LoginPageViewModel()
+        {
+            AccountAndPassword = new AccountAndPassword() { Account = "arcsinw", Password = "1234567" };
+        }
 
         private ApiService _apiService = new ApiService();
 
-        public void Login()
+        public async void Login()
         {
-            _apiService.UserLogin(AccountAndPassword.Account, AccountAndPassword.Password);
-
-        } 
+            LoginResponse response = await _apiService.UserLogin(AccountAndPassword.Account, AccountAndPassword.Password);
+            if(response!=null)
+            {
+            }
+        }
     }
 }

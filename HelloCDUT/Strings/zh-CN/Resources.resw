@@ -48,4 +48,25 @@
   <data name="AppName.Text" xml:space="preserve">
     <value>你好理工</value>
   </data>
+  <data name="ForgetPwd.Text" xml:space="preserve">
+    <value>忘记密码？</value>
+  </data>
+  <data name="SignUp.Text" xml:space="preserve">
+    <value>注册</value>
+  </data>
+  <data name="AccountServiceCenter.Text" xml:space="preserve">
+    <value>账号服务中心</value>
+  </data>
+  <data name="ByAAOAccount.Text" xml:space="preserve">
+    <value>使用教务账号</value>
+  </data>
+  <data name="ByEmail.Text" xml:space="preserve">
+    <value>使用邮箱</value>
+  </data>
+  <data name="TryFindPwd.Content" xml:space="preserve">
+    <value>尝试找回密码</value>
+  </data>
+  <data name="GetVerificationCode.Content" xml:space="preserve">
+    <value>获取验证码</value>
+  </data>
 </root>

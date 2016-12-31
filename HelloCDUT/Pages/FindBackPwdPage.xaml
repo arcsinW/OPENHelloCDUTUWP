@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="HelloCDUT.Pages.FindBackPwdPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloCDUT.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource PageBackgroundColorBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Title-->
+        <Grid Grid.Row="0" Background="{ThemeResource AppThemeColorBrush}">
+            <TextBlock Margin="12,0" FontSize="20" VerticalAlignment="Center"  
+                       Foreground="White" Text="账号服务中心" x:Uid="AccountServiceCenter"/>
+        </Grid>
+
+        <Grid>
+            <Pivot>
+                <PivotItem>
+                    <PivotItem.Header>
+                        <TextBlock x:Uid="ByAAOAccount" Text="使用教务账号" 
+                                   Foreground="{ThemeResource AppThemeColorBrush}"/>
+                    </PivotItem.Header>
+                    <Grid>
+                        <TextBox PlaceholderText="教务系统账号 | AAO account"
+                                 Style="{ThemeResource LightTextBoxStyle}"/>
+                        <PasswordBox PlaceholderText="教务系统密码 | AAO password"/>
+                        <TextBox  Style="{ThemeResource LightTextBoxStyle}"/>
+                        <Button x:Uid="TryFindPwd" Style="{ThemeResource LightButtonStyle}"/>
+                    </Grid>
+                </PivotItem>
+
+                <PivotItem>
+                    <PivotItem.Header>
+                        <TextBlock x:Uid="ByEmail" Text="使用邮箱" 
+                                   Foreground="{ThemeResource AppThemeColorBrush}"/>
+                    </PivotItem.Header>
+                    <Grid>
+                        <TextBox PlaceholderText="邮箱 | Email" Style="{ThemeResource LightTextBoxStyle}"/>
+                        <TextBox PlaceholderText="验证码" Style="{ThemeResource LightTextBoxStyle}"/>
+                        <PasswordBox PlaceholderText="新密码 | New password"/>
+                        <PasswordBox PlaceholderText="再次输入密码 | Input new password again"/>
+                        <Button x:Uid="TryFindPwd" Style="{ThemeResource LightButtonStyle}"/>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+    </Grid>
+</Page>

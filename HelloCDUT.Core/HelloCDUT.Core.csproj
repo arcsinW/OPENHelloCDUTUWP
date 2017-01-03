@@ -111,34 +111,36 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComponentModel\ObserableObjectBase.cs" />
+    <Compile Include="ComponentModel\VerifiableBase.cs" />
+    <Compile Include="ComponentModel\VerifiableObjectErrors.cs" />
+    <Compile Include="Exceptions\SignInRequiredException.cs" />
     <Compile Include="Helper\ConnectionHelper.cs" />
     <Compile Include="Helper\ConnectionType.cs" />
     <Compile Include="Helper\DeviceInformationHelper.cs" />
-    <Compile Include="Helper\GlobalStringHelper.cs" />
     <Compile Include="Helper\JsonHelper.cs" />
+    <Compile Include="Helper\ResourceLoaderHelper.cs" />
     <Compile Include="Extensions\ListViewBaseExtensions.cs" />
     <Compile Include="Helper\XamlHelper.cs" />
     <Compile Include="Http\ApiBaseService.cs" />
     <Compile Include="Http\ApiService.cs" />
     <Compile Include="Http\HttpBaseService.cs" />
-    <Compile Include="Model\Base\ModelBase.cs" />
-    <Compile Include="Model\Base\VerifiableBase.cs" />
-    <Compile Include="Model\Base\VerifiableObjectErrors.cs" />
     <Compile Include="Model\Input\AccountAndPassword.cs" />
     <Compile Include="Model\Library\Book.cs" />
-    <Compile Include="Model\LoginResponse.cs" />
     <Compile Include="Model\ResponseBase.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RSAEncrypt\RSAEncryptHelper.cs" />
+    <Compile Include="Service\AppEnvironment.cs" />
+    <Compile Include="Service\AuthEnforcementHandler.cs" />
+    <Compile Include="Service\IAppEnvironment.cs" />
+    <Compile Include="Service\IAuthEnforcementHandler.cs" />
     <Compile Include="Validations\AccountValidation.cs" />
-    <Compile Include="ViewModel\CoursePageViewModel.cs" />
-    <Compile Include="ViewModel\FindBackPwdViewModel.cs" />
-    <Compile Include="ViewModel\LoginPageViewModel.cs" />
-    <Compile Include="ViewModel\SignUpViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelBase.cs" />
     <EmbeddedResource Include="Properties\HelloCDUT.Core.rd.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\Base\" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="crypto">
       <HintPath>I:\Windows 8.1\你好理工\packages\Portable.BouncyCastle.1.7.0.2\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10\crypto.dll</HintPath>

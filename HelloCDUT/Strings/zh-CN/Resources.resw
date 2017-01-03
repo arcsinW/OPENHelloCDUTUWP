@@ -51,7 +51,7 @@
   <data name="ForgetPwd.Text" xml:space="preserve">
     <value>忘记密码？</value>
   </data>
-  <data name="SignUp.Text" xml:space="preserve">
+  <data name="SignUp_Title.Text" xml:space="preserve">
     <value>注册</value>
   </data>
   <data name="AccountServiceCenter.Text" xml:space="preserve">
@@ -68,5 +68,17 @@
   </data>
   <data name="GetVerificationCode.Content" xml:space="preserve">
     <value>获取验证码</value>
+  </data>
+  <data name="MessageDialog_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="SignInRequired_Title" xml:space="preserve">
+    <value>需要登录</value>
+  </data>
+  <data name="MessageDialog_Embarrassed" xml:space="preserve">
+    <value>这真是令人尴尬 :(</value>
+  </data>
+  <data name="SignUp_Button.Content" xml:space="preserve">
+    <value>注册</value>
   </data>
 </root>

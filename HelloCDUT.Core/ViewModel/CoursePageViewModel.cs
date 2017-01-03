@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloCDUT.Core.ViewModel
+namespace HelloCDUT.Core.ViewModels
 {
     class CoursePageViewModel
     {

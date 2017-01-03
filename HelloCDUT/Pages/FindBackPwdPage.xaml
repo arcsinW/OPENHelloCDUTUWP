@@ -7,6 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <SolidColorBrush x:Key="PivotHeaderForegroundSelectedBrush" Color="Red"/>
+        <SolidColorBrush x:Key="PivotHeaderForegroundUnselectedBrush" Color="AliceBlue"/>
+    </Page.Resources>
+    
     <Grid Background="{ThemeResource PageBackgroundColorBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="48"/>
@@ -15,38 +20,54 @@
 
         <!--Title-->
         <Grid Grid.Row="0" Background="{ThemeResource AppThemeColorBrush}">
-            <TextBlock Margin="12,0" FontSize="20" VerticalAlignment="Center"  
-                       Foreground="White" Text="账号服务中心" x:Uid="AccountServiceCenter"/>
+            <TextBlock Style="{ThemeResource TitleTextBlockStyle}" x:Uid="AccountServiceCenter"/>
         </Grid>
 
-        <Grid>
+        <Grid Grid.Row="1">
             <Pivot>
-                <PivotItem>
-                    <PivotItem.Header>
-                        <TextBlock x:Uid="ByAAOAccount" Text="使用教务账号" 
-                                   Foreground="{ThemeResource AppThemeColorBrush}"/>
-                    </PivotItem.Header>
-                    <Grid>
+                <PivotItem Header="By AAO">
+                    <!--<PivotItem.Header>
+                        <TextBlock x:Uid="ByAAOAccount" Text="使用教务账号" />
+                    </PivotItem.Header>-->
+                    <StackPanel>
                         <TextBox PlaceholderText="教务系统账号 | AAO account"
                                  Style="{ThemeResource LightTextBoxStyle}"/>
-                        <PasswordBox PlaceholderText="教务系统密码 | AAO password"/>
-                        <TextBox  Style="{ThemeResource LightTextBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="教务系统密码 | AAO password"
+                                     Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="新密码 | New password" Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="再次输入新密码 | New password again" Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
                         <Button x:Uid="TryFindPwd" Style="{ThemeResource LightButtonStyle}"/>
-                    </Grid>
+                    
+                    </StackPanel>
                 </PivotItem>
 
                 <PivotItem>
                     <PivotItem.Header>
-                        <TextBlock x:Uid="ByEmail" Text="使用邮箱" 
-                                   Foreground="{ThemeResource AppThemeColorBrush}"/>
+                        <TextBlock x:Uid="ByEmail" Text="使用邮箱" />
                     </PivotItem.Header>
-                    <Grid>
+                    <StackPanel>
                         <TextBox PlaceholderText="邮箱 | Email" Style="{ThemeResource LightTextBoxStyle}"/>
-                        <TextBox PlaceholderText="验证码" Style="{ThemeResource LightTextBoxStyle}"/>
-                        <PasswordBox PlaceholderText="新密码 | New password"/>
-                        <PasswordBox PlaceholderText="再次输入密码 | Input new password again"/>
+                        <TextBlock/>
+                        
+                        <TextBox PlaceholderText="验证码 | Verification code" Style="{ThemeResource LightTextBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="新密码 | New password" Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="再次输入密码 | New password again" Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
                         <Button x:Uid="TryFindPwd" Style="{ThemeResource LightButtonStyle}"/>
-                    </Grid>
+                    </StackPanel>
                 </PivotItem>
             </Pivot>
         </Grid>

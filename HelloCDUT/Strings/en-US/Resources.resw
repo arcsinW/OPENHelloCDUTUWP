@@ -51,7 +51,7 @@
   <data name="ForgetPwd.Text" xml:space="preserve">
     <value>Forget password?</value>
   </data>
-  <data name="SignUp.Text" xml:space="preserve">
+  <data name="SignUp_Title.Text" xml:space="preserve">
     <value>Sign up</value>
   </data>
   <data name="AccountServiceCenter.Text" xml:space="preserve">
@@ -68,5 +68,17 @@
   </data>
   <data name="GetVerificationCode.Content" xml:space="preserve">
     <value>Get Verification code</value>
+  </data>
+  <data name="MessageDialog_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SignInRequired_Title" xml:space="preserve">
+    <value>Sign in require</value>
+  </data>
+  <data name="MessageDialog_Embarrassed" xml:space="preserve">
+    <value>This is really embarrassed :(</value>
+  </data>
+  <data name="SignUp_Button.Content" xml:space="preserve">
+    <value>Sign up</value>
   </data>
 </root>

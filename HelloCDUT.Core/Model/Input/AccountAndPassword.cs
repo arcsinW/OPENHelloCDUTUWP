@@ -1,11 +1,5 @@
-﻿using HelloCDUT.Core.Helper;
-using HelloCDUT.Core.Model.Base;
-using System;
-using System.Collections.Generic;
+﻿using HelloCDUT.Core.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HelloCDUT.Core.Model.Input
 {

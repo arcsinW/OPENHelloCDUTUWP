@@ -17,16 +17,16 @@ namespace HelloCDUT.Core.Http
             dic.Add("action", "registerUser");
             dic.Add("user_name", RSAEncryptHelper.PublicEncrypt(userName));
             dic.Add("user_password", RSAEncryptHelper.PublicEncrypt(userPassword));
-            LoginResponse response = await PostDictionary<LoginResponse>(dic);
+            User response = await PostDictionary<User>(dic);
         } 
 
-        public async Task<LoginResponse> UserLogin(string userName,string userPassword)
+        public async Task<User> UserLogin(string userName,string userPassword)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("action", "userLogin");
             dic.Add("user_name", RSAEncryptHelper.PublicEncrypt(userName));
             dic.Add("user_password", RSAEncryptHelper.PublicEncrypt(userPassword));
-            return await PostDictionary<LoginResponse>(dic);
+            return await PostDictionary<User>(dic);
         }
     }
 }

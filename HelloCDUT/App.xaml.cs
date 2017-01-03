@@ -9,7 +9,10 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Windows.Networking.PushNotifications;
-using Microsoft.WindowsAzure.Messaging; 
+using Microsoft.WindowsAzure.Messaging;
+using Windows.UI.Core;
+using Windows.UI;
+using Windows.UI.Xaml.Media;
 
 namespace HelloCDUT
 {
@@ -26,9 +29,30 @@ namespace HelloCDUT
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            this.UnhandledException += App_UnhandledException;
+            this.UnhandledException += App_UnhandledException; 
         }
 
+        #region Handler BackKey
+
+        private void HandleBackKeyPress()
+        {
+            SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
+        }
+
+        private void App_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            if (rootFrame != null)
+            {
+                if (rootFrame.CanGoBack)
+                {
+                    rootFrame.GoBack();
+                }
+            }
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = rootFrame.CanGoBack ? AppViewBackButtonVisibility.Visible : AppViewBackButtonVisibility.Collapsed;
+        }
+
+        #endregion
 
         #region Handle global unhandled exceptions
         private async void App_UnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
@@ -50,22 +74,34 @@ namespace HelloCDUT
         private async void SynchronizationContext_UnhandledException(object sender, Helper.UnhandledExceptionEventArgs e)
         {
             e.Handled = true;
-            await new MessageDialog("Synchronization Context Unhandled Exception:\r\n" + e.Exception.Message, "爆了 :(")
+            await new MessageDialog("Synchronization Context Unhandled Exception:\r\n" + e.Exception.Message, ResourceLoaderHelper.Instance.GetString("MessageDialog_Embarrassed"))
                 .ShowAsync();
         }
 
         #endregion
 
+       
+
         private async void InitNotificationAsync()
         {
-            var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
-            var hub = new NotificationHub("HelloCDUTNotificationHub", "Endpoint=sb://hellocdutnotification.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=hZCf14UTl3kxd2XZgfuL3nonCKF9TYEaN8AmkMg2RoQ=");
-            var result = await hub.RegisterNativeAsync(channel.Uri);
 
-            if(result.RegistrationId != null)
+            try
+            {
+                var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+                var hub = new NotificationHub("HelloCDUTNotificationHub", "Endpoint=sb://hellocdutnotification.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=hZCf14UTl3kxd2XZgfuL3nonCKF9TYEaN8AmkMg2RoQ=");
+                var result = await hub.RegisterNativeAsync(channel.Uri);
+
+                if (result.RegistrationId != null)
+                {
+#if DEBUG
+                    System.Diagnostics.Debug.WriteLine($"Registration successful : {result.RegistrationId}");
+#endif
+                }
+            }
+            catch (Exception e)
             {
 #if DEBUG
-                System.Diagnostics.Debug.WriteLine($"Registration successful : {result.RegistrationId}");
+                System.Diagnostics.Debug.WriteLine($"InitNotificationAsync : {e.Message}");
 #endif
             }
 
@@ -81,7 +117,7 @@ namespace HelloCDUT
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
-
+            
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
             if (rootFrame == null)
@@ -90,6 +126,7 @@ namespace HelloCDUT
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
+                rootFrame.Navigated += OnNavigated;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
@@ -107,14 +144,27 @@ namespace HelloCDUT
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(LoginPage), e.Arguments);
+                    rootFrame.Navigate(typeof(SignInPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
             RegisterExceptionHandlingSynchronizationContext();
 
+            rootFrame.BorderBrush = Current.Resources["AppThemeColorBrush"] as SolidColorBrush;
+            rootFrame.BorderThickness = new Thickness(1);
+
+            HandleBackKeyPress();
             InitNotificationAsync();
+        }
+
+        private void OnNavigated(object sender, NavigationEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            if(rootFrame != null)
+            {
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = rootFrame.CanGoBack ? AppViewBackButtonVisibility.Visible : AppViewBackButtonVisibility.Collapsed;
+            }
         }
 
         /// <summary>

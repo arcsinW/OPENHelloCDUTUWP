@@ -1,21 +1,26 @@
-﻿using HelloCDUT.Core.Http;
-using HelloCDUT.Core.Model;
-using HelloCDUT.Core.Model.Input;
-using HelloCDUT.Core.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HelloCDUT.Commands;
+using HelloCDUT.Models;
+using HelloCDUT.Models.Input;
+using HelloCDUT.Facades;
+using HelloCDUT.Services;
+using HelloCDUT.Views;
 
-namespace HelloCDUT.Core.ViewModels
+namespace HelloCDUT.ViewModels
 {
     public class SignInViewModel : ViewModelBase
     {
-        public AccountAndPassword AccountAndPassword { get; set; } 
+        public AccountAndPassword AccountAndPassword { get; set; }
+        private readonly INavigationFacade _navigationFacade;
+        private readonly IDialogService _dialogService;
 
-        public SignInViewModel()
+        public RelayCommand SignInCommand { get; private set; }
+
+        public SignInViewModel(INavigationFacade navigationFacade,IDialogService dialogService)
         {
+            _navigationFacade = navigationFacade;
+            _dialogService = dialogService;
+
+            SignInCommand = new RelayCommand(SignIn);
             AccountAndPassword = new AccountAndPassword() { Account = "arcsinw", Password = "1234567" };
         }
 
@@ -23,12 +28,7 @@ namespace HelloCDUT.Core.ViewModels
 
         public async void SignIn()
         {
-            User user = await _apiService.UserLogin(AccountAndPassword.Account, AccountAndPassword.Password);
-            if(user!=null)
-            {
-                AppEnvironment.Instance.CurrentUser = user;
-                
-            }
+            await _apiService.SignInAsync(AccountAndPassword);
         }
 
         /// <summary>

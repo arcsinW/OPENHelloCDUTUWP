@@ -2,16 +2,18 @@
     x:Class="HelloCDUT.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:HelloCDUT"
-    RequestedTheme="Light">
+    xmlns:local="using:HelloCDUT">
 
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Light">
                     <Color x:Key="AppThemeColor">#FF12B7F5</Color>
-                    <SolidColorBrush x:Key="AppThemeColorBrush" Color="#FF12B7F5"/>
+                    <!--<Color x:Key="AppThemeColor">#73e1fc</Color>-->
+                    <SolidColorBrush x:Key="AppThemeColorBrush"  Color="#FF12B7F5"/>
 
+                    <Color x:Key="AppThemeLightColor">#0c9bf4</Color>
+                    <Color x:Key="AppThemePressColor">#007dff</Color>
                     <SolidColorBrush x:Key="PageBackgroundColorBrush" Color="White"/>
 
                     <!--<SolidColorBrush x:Key="PivotHeaderForegroundSelectedBrush" Color="{ThemeResource AppThemeColor}"/>

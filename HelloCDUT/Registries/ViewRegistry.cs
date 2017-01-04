@@ -23,10 +23,9 @@
 //  ---------------------------------------------------------------------------------
 
 
-using HelloCDUT.Core.ViewModels;
-using HelloCDUT.Facades;
-using HelloCDUT.Pages;
 using HelloCDUT.ViewModels;
+using HelloCDUT.Facades;
+using HelloCDUT.Views;
 
 namespace HelloCDUT.Registries
 {
@@ -40,6 +39,7 @@ namespace HelloCDUT.Registries
         /// </summary>
         public void Configure()
         {
+            NavigationFacade.AddType(typeof(MainPage), typeof(MainViewModel));
             NavigationFacade.AddType(typeof(SettingsPage), typeof(SettingsViewModel));
             NavigationFacade.AddType(typeof(ProfilePage), typeof(ProfileViewModel));
             NavigationFacade.AddType(typeof(SignInPage), typeof(SignInViewModel));

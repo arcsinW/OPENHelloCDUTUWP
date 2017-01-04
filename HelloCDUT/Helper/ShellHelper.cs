@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 
 namespace HelloCDUT.Helper
@@ -26,15 +27,28 @@ namespace HelloCDUT.Helper
 
         public void ChangeTitleColor()
         {
-            var applicationView = ApplicationView.GetForCurrentView();
-             
-            applicationView.TitleBar.BackgroundColor = Windows.UI.Xaml.Application.Current.Resources["AppThemeColor"] as Color?;
-            applicationView.TitleBar.ForegroundColor = Colors.White;
-            applicationView.TitleBar.ButtonBackgroundColor = Windows.UI.Xaml.Application.Current.Resources["AppThemeColor"] as Color?; ;
-            applicationView.TitleBar.ButtonForegroundColor = Colors.White;
+            var titleBar = ApplicationView.GetForCurrentView().TitleBar;
 
-            ApplicationView.GetForCurrentView().ShowStandardSystemOverlays();
+            //active
+            titleBar.BackgroundColor = (Color)Application.Current.Resources["AppThemeColor"];
+            titleBar.ForegroundColor = Colors.White;
 
+            //inactive
+            titleBar.InactiveBackgroundColor = (Color)Application.Current.Resources["AppThemeColor"];
+            titleBar.InactiveForegroundColor = Colors.LightGray;
+
+            //buttons
+            titleBar.ButtonBackgroundColor = (Color)Application.Current.Resources["AppThemeColor"];
+            titleBar.ButtonForegroundColor = Colors.White;
+
+            titleBar.ButtonHoverBackgroundColor = (Color)Application.Current.Resources["AppThemeLightColor"];
+            titleBar.ButtonHoverForegroundColor = Colors.White;
+
+            titleBar.ButtonInactiveBackgroundColor = (Color)Application.Current.Resources["AppThemeLightColor"];
+            titleBar.ButtonInactiveForegroundColor = Colors.LightGray;
+
+            titleBar.ButtonPressedBackgroundColor = (Color)Application.Current.Resources["AppThemePressColor"];
+            titleBar.ButtonPressedForegroundColor = Colors.White;
         }
     }
 }

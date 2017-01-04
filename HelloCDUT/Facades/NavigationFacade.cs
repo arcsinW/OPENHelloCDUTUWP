@@ -27,12 +27,12 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Threading.Tasks;
-using HelloCDUT.Core.Model;
+using HelloCDUT.Models;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
-using HelloCDUT.Pages;
+using HelloCDUT.Views;
 using HelloCDUT.ViewModels;
 using HelloCDUT.Serialization;
 
@@ -171,42 +171,42 @@ namespace HelloCDUT.Facades
 
         public void NavigateToMainView()
         {
-            throw new NotImplementedException();
-        }
-
-        public void NavigateToCropView(StorageFile file)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void NavigateToPhotoDetailsView(string photoId)
-        {
-            throw new NotImplementedException();
+            Navigate(typeof(MainViewModel));
         }
 
         public void NavigateToProfileView()
         {
-            throw new NotImplementedException();
+            Navigate(typeof(WelcomeViewModel));
         }
 
         public void NavigateToProfileView(User user)
         {
-            throw new NotImplementedException();
+            Navigate(typeof(ProfileViewModel),SerializationHelper.Serialize(user));
         }
 
         public void NavigateToSignInView()
         {
-            throw new NotImplementedException();
+            Navigate(typeof(SignInViewModel));
         }
 
         public void NavigateToWelcomeView()
         {
-            throw new NotImplementedException();
+            Navigate(typeof(WelcomeViewModel));
         }
 
-        public Task ShowCreateCategoryDialog()
+        public void NavigateToCourseView()
         {
-            throw new NotImplementedException();
+            Navigate(typeof(CourseViewModel));
+        }
+
+        public void NavigateToLibraryView()
+        {
+            Navigate(typeof(LibraryViewModel));
+        }
+
+        public void NavigateToCampusCardView()
+        {
+            Navigate(typeof(CampusCardViewModel));
         }
     }
 }

@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="HelloCDUT.Views.FindBackPwdPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloCDUT.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <SolidColorBrush x:Key="PivotHeaderForegroundSelectedBrush" Color="Red"/>
+        <SolidColorBrush x:Key="PivotHeaderForegroundUnselectedBrush" Color="AliceBlue"/>
+    </Page.Resources>
+    
+    <Grid Background="{ThemeResource PageBackgroundColorBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Title-->
+        <Grid Grid.Row="0" Background="{ThemeResource AppThemeColorBrush}">
+            <TextBlock Style="{ThemeResource TitleTextBlockStyle}" x:Uid="AccountServiceCenter"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Pivot>
+                <PivotItem Header="By AAO">
+                    <!--<PivotItem.Header>
+                        <TextBlock x:Uid="ByAAOAccount" Text="使用教务账号" />
+                    </PivotItem.Header>-->
+                    <StackPanel>
+                        <TextBox PlaceholderText="教务系统账号 | AAO account"
+                                 Style="{ThemeResource LightTextBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="教务系统密码 | AAO password"
+                                     Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="新密码 | New password" Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="再次输入新密码 | New password again" Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <Button x:Uid="TryFindPwd" Style="{ThemeResource LightButtonStyle}"/>
+                    
+                    </StackPanel>
+                </PivotItem>
+
+                <PivotItem>
+                    <PivotItem.Header>
+                        <TextBlock x:Uid="ByEmail" Text="使用邮箱" />
+                    </PivotItem.Header>
+                    <StackPanel>
+                        <TextBox PlaceholderText="邮箱 | Email" Style="{ThemeResource LightTextBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <TextBox PlaceholderText="验证码 | Verification code" Style="{ThemeResource LightTextBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="新密码 | New password" Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <PasswordBox PlaceholderText="再次输入密码 | New password again" Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock/>
+                        
+                        <Button x:Uid="TryFindPwd" Style="{ThemeResource LightButtonStyle}"/>
+                    </StackPanel>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+    </Grid>
+</Page>

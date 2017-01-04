@@ -22,9 +22,9 @@
 //  THE SOFTWARE.
 //  ---------------------------------------------------------------------------------
 
-using HelloCDUT.Core.Model;
-using HelloCDUT.Core.Service;
-using HelloCDUT.Pages;
+using HelloCDUT.Models;
+using HelloCDUT.Services;
+using HelloCDUT.Views;
 using System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;

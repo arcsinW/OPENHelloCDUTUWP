@@ -22,7 +22,8 @@
 //  THE SOFTWARE.
 //  ---------------------------------------------------------------------------------
 
-using Microsoft.Practices.Unity; 
+using HelloCDUT.ViewModels;
+using Microsoft.Practices.Unity;
 
 namespace HelloCDUT.Registries
 {
@@ -46,6 +47,8 @@ namespace HelloCDUT.Registries
         {
             // We use the container controlled lifetime manager here, as we want to keep instances (for backward navigation)
             // unless we request a new one explicitly (forward navigation).
+            Container.RegisterType<AppShellViewModel>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<SignInViewModel>(new ContainerControlledLifetimeManager());
             //Container.RegisterType<CategoriesViewModel>(new ContainerControlledLifetimeManager());
             //Container.RegisterType<StreamViewModel>(new ExternallyControlledLifetimeManager());
             //Container.RegisterType<IUploadFinishedHandler, DefaultUploadFinishedHandler>();

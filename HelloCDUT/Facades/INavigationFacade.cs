@@ -21,7 +21,7 @@
 //  THE SOFTWARE.
 //  ---------------------------------------------------------------------------------
 
-using HelloCDUT.Core.Model;
+using HelloCDUT.Models;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
@@ -69,6 +69,15 @@ namespace HelloCDUT.Facades
         /// <summary>
         /// Navigates to the Welcome view.
         /// </summary>
-        void NavigateToWelcomeView();  
+        void NavigateToWelcomeView();
+
+        /// <summary>
+        /// Navigates to course view
+        /// </summary>
+        void NavigateToCourseView();
+
+        void NavigateToLibraryView();
+
+        void NavigateToCampusCardView();
     }
 }

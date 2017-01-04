@@ -22,7 +22,7 @@
 //  THE SOFTWARE.
 //  ---------------------------------------------------------------------------------
 
-using HelloCDUT.Core.ComponentModel;
+using HelloCDUT.ComponentModel;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 

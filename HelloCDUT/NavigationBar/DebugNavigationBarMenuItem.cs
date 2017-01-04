@@ -22,7 +22,7 @@
 //  THE SOFTWARE.
 //  ---------------------------------------------------------------------------------
 
-using HelloCDUT.Pages;
+using HelloCDUT.Views;
 using System;
 using Windows.UI.Xaml.Controls;
 

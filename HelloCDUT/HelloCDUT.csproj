@@ -103,13 +103,36 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="ComponentModel\ObserableObjectBase.cs" />
+    <Compile Include="ComponentModel\VerifiableBase.cs" />
+    <Compile Include="ComponentModel\VerifiableObjectErrors.cs" />
     <Compile Include="Controls\Drawer.cs" />
+    <Compile Include="Exceptions\SignInRequiredException.cs" />
+    <Compile Include="Extensions\DeviceFamilyStringExtensions.cs" />
+    <Compile Include="Extensions\ListViewBaseExtensions.cs" />
     <Compile Include="Facades\ILicensingFacade.cs" />
     <Compile Include="Facades\INavigationFacade.cs" />
     <Compile Include="Facades\NavigationFacade.cs" />
+    <Compile Include="Helper\ConnectionHelper.cs" />
+    <Compile Include="Helper\ConnectionType.cs" />
+    <Compile Include="Helper\DeviceInformationHelper.cs" />
     <Compile Include="Helper\ExceptionHandlingSynchronizationContext.cs" />
+    <Compile Include="Helper\JsonHelper.cs" />
+    <Compile Include="Helper\ResourceLoaderHelper.cs" />
     <Compile Include="Helper\SerializationHelper.cs" />
     <Compile Include="Helper\ShellHelper.cs" />
+    <Compile Include="Helper\XamlHelper.cs" />
+    <Compile Include="Lifecycle\AppInitialization.cs" />
+    <Compile Include="Lifecycle\AppLaunchCounter.cs" />
+    <Compile Include="Models\Config.cs" />
+    <Compile Include="Models\DefaultConfig.cs" />
+    <Compile Include="Models\DeviceFamily.cs" />
+    <Compile Include="Models\Input\AccountAndPassword.cs" />
+    <Compile Include="Models\Library\Book.cs" />
+    <Compile Include="Models\ResponseBase.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="NavigationBar\DebugNavigationBarMenuItem.cs" />
     <Compile Include="NavigationBar\INavigationBarMenuItem.cs" />
     <Compile Include="NavigationBar\NavigationBarItemPosition.cs" />
@@ -117,55 +140,67 @@
     <Compile Include="NavigationBar\ProfileNavigationBarMenuItem.cs" />
     <Compile Include="NavigationBar\SettingsNavigationBarMenuItem.cs" />
     <Compile Include="NavigationBar\WelcomeNavigationBarMenuItem.cs" />
-    <Compile Include="Pages\AboutPage.xaml.cs">
+    <Compile Include="RSAEncrypt\RSAEncryptHelper.cs" />
+    <Compile Include="Services\ApiBaseService.cs" />
+    <Compile Include="Services\ApiService.cs" />
+    <Compile Include="Services\AppEnvironment.cs" />
+    <Compile Include="Services\AuthEnforcementHandler.cs" />
+    <Compile Include="Services\HttpBaseService.cs" />
+    <Compile Include="Services\IAppEnvironment.cs" />
+    <Compile Include="Services\IAuthEnforcementHandler.cs" />
+    <Compile Include="Services\IHelloCDUTService.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AppShell.xaml.cs">
+    <Compile Include="Views\AppShell.xaml.cs">
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CampusCardPage.xaml.cs">
+    <Compile Include="Views\CampusCardPage.xaml.cs">
       <DependentUpon>CampusCardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CoursePage.xaml.cs">
+    <Compile Include="Views\CoursePage.xaml.cs">
       <DependentUpon>CoursePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\DebugPage.xaml.cs">
+    <Compile Include="Views\DebugPage.xaml.cs">
       <DependentUpon>DebugPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EmptyRoomPage.xaml.cs">
+    <Compile Include="Views\EmptyRoomPage.xaml.cs">
       <DependentUpon>EmptyRoomPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FindBackPwdPage.xaml.cs">
+    <Compile Include="Views\FindBackPwdPage.xaml.cs">
       <DependentUpon>FindBackPwdPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\GradePage.xaml.cs">
+    <Compile Include="Views\GradePage.xaml.cs">
       <DependentUpon>GradePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\LibraryPage.xaml.cs">
+    <Compile Include="Views\IDialogService.cs" />
+    <Compile Include="Views\LibraryPage.xaml.cs">
       <DependentUpon>LibraryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ProfilePage.xaml.cs">
+    <Compile Include="Views\MessageDialogService.cs" />
+    <Compile Include="Views\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SettingsPage.xaml.cs">
+    <Compile Include="Views\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SignInPage.xaml.cs">
+    <Compile Include="Views\SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SignUpPage.xaml.cs">
+    <Compile Include="Views\SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SyllabusPage.xaml.cs">
+    <Compile Include="Views\SyllabusPage.xaml.cs">
       <DependentUpon>SyllabusPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WebViewPage.xaml.cs">
+    <Compile Include="Views\WebViewPage.xaml.cs">
       <DependentUpon>WebViewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WelcomePage.xaml.cs">
+    <Compile Include="Views\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -275,71 +310,71 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Pages\AboutPage.xaml">
+    <Page Include="Views\AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\AppShell.xaml">
+    <Page Include="Views\AppShell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\CampusCardPage.xaml">
+    <Page Include="Views\CampusCardPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\CoursePage.xaml">
+    <Page Include="Views\CoursePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\DebugPage.xaml">
+    <Page Include="Views\DebugPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EmptyRoomPage.xaml">
+    <Page Include="Views\EmptyRoomPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\FindBackPwdPage.xaml">
+    <Page Include="Views\FindBackPwdPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\GradePage.xaml">
+    <Page Include="Views\GradePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\LibraryPage.xaml">
+    <Page Include="Views\LibraryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ProfilePage.xaml">
+    <Page Include="Views\ProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SettingsPage.xaml">
+    <Page Include="Views\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SignInPage.xaml">
+    <Page Include="Views\SignInPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\MainPage.xaml">
+    <Page Include="Views\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SignUpPage.xaml">
+    <Page Include="Views\SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SyllabusPage.xaml">
+    <Page Include="Views\SyllabusPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\WebViewPage.xaml">
+    <Page Include="Views\WebViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\WelcomePage.xaml">
+    <Page Include="Views\WelcomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -349,13 +384,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HelloCDUT.Core\HelloCDUT.Core.csproj">
-      <Project>{3030E44C-36D2-41E2-B306-246293FC1A79}</Project>
-      <Name>HelloCDUT.Core</Name>
-    </ProjectReference>
+    <Folder Include="Actions\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Actions\" />
+    <Reference Include="crypto, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>I:\Windows 8.1\你好理工\packages\Portable.BouncyCastle.1.7.0.2\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10\crypto.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -22,7 +22,9 @@
 //  THE SOFTWARE.
 //  ---------------------------------------------------------------------------------
 
-using HelloCDUT.Core.Service;
+using HelloCDUT.Facades;
+using HelloCDUT.Services;
+using HelloCDUT.Views;
 using Microsoft.Practices.Unity;
 
 namespace HelloCDUT.Registries
@@ -46,9 +48,9 @@ namespace HelloCDUT.Registries
         public void Configure()
         {
             Container.RegisterInstance(typeof(IAppEnvironment), new AppEnvironment());
-
-            //Container.RegisterType<IDialogService, MessageDialogService>();
-            //Container.RegisterType<INavigationFacade, NavigationFacade>();
+            Container.RegisterInstance(typeof(IHelloCDUTService), new ApiService());
+            Container.RegisterType<IDialogService, MessageDialogService>();
+            Container.RegisterType<INavigationFacade, NavigationFacade>();
             Container.RegisterType<IAuthEnforcementHandler, AuthEnforcementHandler>(
                 new ContainerControlledLifetimeManager());
             //Container.RegisterType<IAuthenticationHandler, AuthenticationHandler>();

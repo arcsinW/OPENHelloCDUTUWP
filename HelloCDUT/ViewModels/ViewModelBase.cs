@@ -1,8 +1,9 @@
-﻿using HelloCDUT.Core.Helper;
+﻿using HelloCDUT.Helper;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Windows.UI.Xaml;
-namespace HelloCDUT.Core.ViewModels
+
+namespace HelloCDUT.ViewModels
 {
     public class ViewModelBase : DependencyObject, INotifyPropertyChanged
     {

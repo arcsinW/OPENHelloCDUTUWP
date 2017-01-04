@@ -1,6 +1,5 @@
-﻿using HelloCDUT.Core.Helper;
-using HelloCDUT.Helper;
-using HelloCDUT.Pages;
+﻿using HelloCDUT.Helper;
+using HelloCDUT.Views;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -13,6 +12,13 @@ using Microsoft.WindowsAzure.Messaging;
 using Windows.UI.Core;
 using Windows.UI;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Notifications;
+using System.Threading.Tasks;
+using HelloCDUT.Unity;
+using HelloCDUT.Lifecycle;
+using Windows.Globalization;
+using Microsoft.Practices.ServiceLocation;
+using HelloCDUT.Facades;
 
 namespace HelloCDUT
 {
@@ -32,27 +38,7 @@ namespace HelloCDUT
             this.UnhandledException += App_UnhandledException; 
         }
 
-        #region Handler BackKey
-
-        private void HandleBackKeyPress()
-        {
-            SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
-        }
-
-        private void App_BackRequested(object sender, BackRequestedEventArgs e)
-        {
-            Frame rootFrame = Window.Current.Content as Frame;
-            if (rootFrame != null)
-            {
-                if (rootFrame.CanGoBack)
-                {
-                    rootFrame.GoBack();
-                }
-            }
-            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = rootFrame.CanGoBack ? AppViewBackButtonVisibility.Visible : AppViewBackButtonVisibility.Collapsed;
-        }
-
-        #endregion
+        
 
         #region Handle global unhandled exceptions
         private async void App_UnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
@@ -84,7 +70,6 @@ namespace HelloCDUT
 
         private async void InitNotificationAsync()
         {
-
             try
             {
                 var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
@@ -114,48 +99,75 @@ namespace HelloCDUT
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected override async void OnLaunched(LaunchActivatedEventArgs e)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
-            
-            // Do not repeat app initialization when the Window already has content,
-            // just ensure that the window is active
-            if (rootFrame == null)
+            //Frame rootFrame = Window.Current.Content as Frame;
+
+            //// Do not repeat app initialization when the Window already has content,
+            //// just ensure that the window is active
+            //if (rootFrame == null)
+            //{
+            //    // Create a Frame to act as the navigation context and navigate to the first page
+            //    rootFrame = new Frame();
+
+            //    rootFrame.NavigationFailed += OnNavigationFailed;
+            //    rootFrame.Navigated += OnNavigated;
+
+            //    if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+            //    {
+            //        //TODO: Load state from previously suspended application
+            //    }
+
+            //    // Place the frame in the current Window
+            //    Window.Current.Content = rootFrame;
+            //}
+
+
+            var shell = await Initialize();
+
+            // Place our app shell in the current Window
+            Window.Current.Content = shell;
+
+            if (shell.AppFrame.Content == null)
             {
-                // Create a Frame to act as the navigation context and navigate to the first page
-                rootFrame = new Frame();
+                var facade = ServiceLocator.Current.GetInstance<INavigationFacade>();
 
-                rootFrame.NavigationFailed += OnNavigationFailed;
-                rootFrame.Navigated += OnNavigated;
-
-                if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+                if (AppLaunchCounter.IsFirstLaunch())
                 {
-                    //TODO: Load state from previously suspended application
+                    facade.NavigateToWelcomeView();
                 }
-
-                // Place the frame in the current Window
-                Window.Current.Content = rootFrame;
+                else
+                {
+                    facade.NavigateToSignInView();
+                }
             }
 
-            if (e.PrelaunchActivated == false)
-            {
-                if (rootFrame.Content == null)
-                {
-                    // When the navigation stack isn't restored navigate to the first page,
-                    // configuring the new page by passing required information as a navigation
-                    // parameter
-                    rootFrame.Navigate(typeof(SignInPage), e.Arguments);
-                }
-                // Ensure the current window is active
-                Window.Current.Activate();
-            }
+            AppLaunchCounter.RegisterLaunch();
+
             RegisterExceptionHandlingSynchronizationContext();
 
-            rootFrame.BorderBrush = Current.Resources["AppThemeColorBrush"] as SolidColorBrush;
-            rootFrame.BorderThickness = new Thickness(1);
+            TileUpdateManager.CreateTileUpdaterForApplication().EnableNotificationQueue(true);
+            BadgeUpdateManager.CreateBadgeUpdaterForApplication();
 
-            HandleBackKeyPress();
             InitNotificationAsync();
+
+            Window.Current.Activate();
+            //if (e.PrelaunchActivated == false)
+            //{
+            //    if (rootFrame.Content == null)
+            //    {
+            //        // When the navigation stack isn't restored navigate to the first page,
+            //        // configuring the new page by passing required information as a navigation
+            //        // parameter
+            //        rootFrame.Navigate(typeof(SignInPage), e.Arguments);
+            //    }
+            //    // Ensure the current window is active
+            //    Window.Current.Activate();
+            //}
+              
+            // Refresh launch counter, needs to be done
+            // after AppLaunchCounter.IsFirstLaunch() is being checked.
+            
         }
 
         private void OnNavigated(object sender, NavigationEventArgs e)
@@ -191,12 +203,51 @@ namespace HelloCDUT
             deferral.Complete();
         }
 
-        protected override void OnActivated(IActivatedEventArgs args)
+        protected override async void OnActivated(IActivatedEventArgs args)
         {
+            base.OnActivated(args);
+
+            var shell = Window.Current.Content as AppShell;
+
+            if (shell == null)
+            {
+                shell = await Initialize();
+            }
+
+            Window.Current.Content = shell;
+
             RegisterExceptionHandlingSynchronizationContext();
-        } 
+        }
         #endregion
 
 
+        /// <summary>
+        /// Initialize the App launch.
+        /// </summary>
+        /// <returns>The AppShell of the app.</returns>
+        private async Task<AppShell> Initialize()
+        {
+            AppShell shell = Window.Current.Content as AppShell;
+
+            // Do not repeat app initialization when the Window already has content,
+            // just ensure that the window is active
+            if (shell == null)
+            {
+                UnityBootstrapper.Init();
+                UnityBootstrapper.ConfigureRegistries();
+
+                await AppInitialization.DoInitializations();
+
+                // Create a AppShell to act as the navigation context and navigate to the first page
+                shell = new AppShell();
+
+                // Set the default language
+                shell.Language = ApplicationLanguages.Languages[0];
+
+                shell.AppFrame.NavigationFailed += OnNavigationFailed;
+            }
+
+            return shell;
+        }
     }
 }

@@ -51,7 +51,7 @@
   <data name="ForgetPwd.Text" xml:space="preserve">
     <value>忘记密码？</value>
   </data>
-  <data name="SignUp_Title.Text" xml:space="preserve">
+  <data name="SignUp.Text" xml:space="preserve">
     <value>注册</value>
   </data>
   <data name="AccountServiceCenter.Text" xml:space="preserve">

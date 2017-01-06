@@ -21,7 +21,7 @@ namespace HelloCDUT.Services
             User response = await PostDictionary<User>(dic);
         }
 
-        public async Task SignInAsync(AccountAndPassword accountPassword)
+        public async Task SignInAsync(SignInInput accountPassword)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("action", "userLogin");

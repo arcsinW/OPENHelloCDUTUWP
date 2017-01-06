@@ -30,9 +30,14 @@
                     <SolidColorBrush x:Key="PivotHeaderForegroundUnselectedBrush" Color="Gray"/>-->
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
- 
+
+            <SolidColorBrush x:Key="PivotHeaderForegroundSelectedBrush" Color="Red"/>
+            <SolidColorBrush x:Key="PivotHeaderForegroundUnselectedBrush" Color="AliceBlue"/>
+
             <!--#region Margin and Padding-->
             <Thickness x:Key="PagePadding">12,24</Thickness>
+
+            <Thickness x:Key="TextBoxPadding">0,12,0,0</Thickness>
             <!--#endregion-->
 
             <Style x:Key="LightPivotStyle" TargetType="Pivot">
@@ -572,9 +577,9 @@
                                         </VisualState>
                                         <VisualState x:Name="Disabled">
                                             <Storyboard>
-                                                <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="RootGrid">
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="RootGrid">
                                                     <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
-                                                </ObjectAnimationUsingKeyFrames>-->
+                                                </ObjectAnimationUsingKeyFrames>
                                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
                                                     <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}"/>
                                                 </ObjectAnimationUsingKeyFrames>
@@ -597,6 +602,10 @@
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="Foreground" Value="White"/>
+            </Style>
+
+            <Style x:Key="WarnTextBlockStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="Red"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

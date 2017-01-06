@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace HelloCDUT.ComponentModel
     {
         private List<string> _messages = new List<string>();
 
-        private List<ValidationResult> _results = new List<ValidationResult>();
+        private ObservableCollection<ValidationResult> _results = new ObservableCollection<ValidationResult>();
 
         internal VerifiableObjectErrors(VerifiableBase verifiableBase)
         {
@@ -44,6 +45,8 @@ namespace HelloCDUT.ComponentModel
         {
             get
             {
+                //var result = _results.Where(x => x.MemberNames.Contains(propertyName));
+                //return result.First().ErrorMessage;
                 foreach (var result in _results)
                 {
                     if (result.MemberNames.Contains(propertyName))

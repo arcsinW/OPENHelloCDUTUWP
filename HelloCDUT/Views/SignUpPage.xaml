@@ -197,30 +197,42 @@
 
         <!--Title-->
         <Grid Grid.Row="0" Background="{ThemeResource AppThemeColorBrush}">
-            <TextBlock Style="{ThemeResource TitleTextBlockStyle}" x:Uid="SignUp_Title"/>
+            <TextBlock Style="{ThemeResource TitleTextBlockStyle}" x:Uid="SignUp"/>
         </Grid>
 
         <Grid Grid.Row="1" Padding="{StaticResource PagePadding}">
             <StackPanel>
-                <TextBox PlaceholderText="账号 | Account" Style="{ThemeResource LightTextBoxStyle}"/>
-                <TextBlock/>
+                <TextBox PlaceholderText="账号 | Account" 
+                         Text="{Binding SignUpInput.Account,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                         Style="{ThemeResource LightTextBoxStyle}"/>
+                <TextBlock Text="{Binding SignUpInput.Errors[Account]}" Style="{ThemeResource WarnTextBlockStyle}"/>
 
-                <PasswordBox PlaceholderText="密码 | Password" Style="{ThemeResource LightPasswordBoxStyle}"/>
-                <TextBlock/>
+                <PasswordBox PlaceholderText="密码 | Password" Margin="{StaticResource TextBoxPadding}"
+                             Password="{Binding SignUpInput.Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                             Style="{ThemeResource LightPasswordBoxStyle}"/>
+                <TextBlock Text="{Binding SignUpInput.Errors[Password]}" Style="{ThemeResource WarnTextBlockStyle}"/>
 
-                <PasswordBox PlaceholderText="再次输入密码 | Password again" Style="{ThemeResource LightPasswordBoxStyle}"/>
-                <TextBlock/>
+                <PasswordBox PlaceholderText="再次输入密码 | Password again" Margin="{StaticResource TextBoxPadding}"
+                             Password="{Binding SignUpInput.PasswordAgain,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                             Style="{ThemeResource LightPasswordBoxStyle}"/>
+                <TextBlock Text="{Binding SignUpInput.Errors[PasswordAgain]}" Style="{ThemeResource WarnTextBlockStyle}"/>
 
-                <Grid Margin="0,0,0,8">
+                <Grid>
                     <StackPanel Orientation="Horizontal">
                         <CheckBox Content="同意" MinWidth="0" BorderThickness="1"  
+                                  IsChecked="{Binding SignUpInput.IsAccept,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                   Style="{StaticResource LightCheckBoxStyle}"/>
                         <HyperlinkButton >
                             <TextBlock Text="《Hello CDUT用户使用协议》" />
                         </HyperlinkButton>
                     </StackPanel>
                 </Grid>
-                <Button x:Uid="SignUp_Button" Content="Sign up" Style="{ThemeResource LightButtonStyle}"/>
+
+                <TextBlock Text="{Binding SignUpInput.Errors[IsAccept]}"/>
+                
+                <Button x:Uid="SignUp_Button" Margin="{StaticResource TextBoxPadding}" Content="Sign up" 
+                        IsEnabled="{Binding SignUpInput.IsValid}"
+                        Style="{ThemeResource LightButtonStyle}"/>
             </StackPanel>
         </Grid>
     </Grid>

@@ -8,6 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource PageBackgroundColorBrush}">
-
+        <FlipView>
+            <FlipViewItem>
+                
+            </FlipViewItem>
+            <FlipViewItem>
+                
+            </FlipViewItem>
+            <FlipViewItem>
+                
+            </FlipViewItem>
+        </FlipView>
     </Grid>
 </Page>

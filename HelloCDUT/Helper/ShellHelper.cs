@@ -44,7 +44,7 @@ namespace HelloCDUT.Helper
             titleBar.ButtonHoverBackgroundColor = (Color)Application.Current.Resources["AppThemeLightColor"];
             titleBar.ButtonHoverForegroundColor = Colors.White;
 
-            titleBar.ButtonInactiveBackgroundColor = (Color)Application.Current.Resources["AppThemeLightColor"];
+            titleBar.ButtonInactiveBackgroundColor = (Color)Application.Current.Resources["AppThemeColor"];
             titleBar.ButtonInactiveForegroundColor = Colors.LightGray;
 
             titleBar.ButtonPressedBackgroundColor = (Color)Application.Current.Resources["AppThemePressColor"];

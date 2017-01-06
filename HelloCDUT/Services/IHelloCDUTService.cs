@@ -16,7 +16,7 @@ namespace HelloCDUT.Services
         /// <returns>The configuration data.</returns>
         //Task<Config> GetConfig();
 
-        Task SignInAsync(AccountAndPassword accountPassword);
+        Task SignInAsync(SignInInput accountPassword);
 
         Task RestoreSignInStatusAsync();
 

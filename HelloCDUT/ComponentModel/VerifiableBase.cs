@@ -9,20 +9,19 @@ using System.Threading.Tasks;
 namespace HelloCDUT.ComponentModel
 {
     public abstract class VerifiableBase : ObserableObjectBase
-    {
-        private VerifiableObjectErrors _errors;
-
+    { 
         public VerifiableBase()
         {
             _errors = new VerifiableObjectErrors(this);
         }
 
+        private VerifiableObjectErrors _errors;
         public VerifiableObjectErrors Errors
         {
             get
             {
                 return _errors;
-            }
+            } 
         }
 
         public bool IsValid

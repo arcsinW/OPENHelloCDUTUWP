@@ -105,6 +105,7 @@
     </Compile>
     <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="ComponentModel\MustTrueAttribute.cs" />
     <Compile Include="ComponentModel\ObserableObjectBase.cs" />
     <Compile Include="ComponentModel\VerifiableBase.cs" />
     <Compile Include="ComponentModel\VerifiableObjectErrors.cs" />
@@ -129,7 +130,10 @@
     <Compile Include="Models\Config.cs" />
     <Compile Include="Models\DefaultConfig.cs" />
     <Compile Include="Models\DeviceFamily.cs" />
-    <Compile Include="Models\Input\AccountAndPassword.cs" />
+    <Compile Include="Models\Input\AAOInput.cs" />
+    <Compile Include="Models\Input\SignInInput.cs" />
+    <Compile Include="Models\Input\EmailInput.cs" />
+    <Compile Include="Models\Input\SignUpInput.cs" />
     <Compile Include="Models\Library\Book.cs" />
     <Compile Include="Models\ResponseBase.cs" />
     <Compile Include="Models\User.cs" />
@@ -149,6 +153,7 @@
     <Compile Include="Services\IAppEnvironment.cs" />
     <Compile Include="Services\IAuthEnforcementHandler.cs" />
     <Compile Include="Services\IHelloCDUTService.cs" />
+    <Compile Include="Services\SignInCompletionSource.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>

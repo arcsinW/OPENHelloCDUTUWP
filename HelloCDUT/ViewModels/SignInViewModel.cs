@@ -9,9 +9,10 @@ namespace HelloCDUT.ViewModels
 {
     public class SignInViewModel : ViewModelBase
     {
-        public AccountAndPassword AccountAndPassword { get; set; }
+        public SignInInput AccountAndPassword { get; set; }
         private readonly INavigationFacade _navigationFacade;
         private readonly IDialogService _dialogService;
+        private readonly IHelloCDUTService _apiService;
 
         public RelayCommand SignInCommand { get; private set; }
 
@@ -19,16 +20,16 @@ namespace HelloCDUT.ViewModels
         {
             _navigationFacade = navigationFacade;
             _dialogService = dialogService;
+            _apiService = new ApiService();
 
             SignInCommand = new RelayCommand(SignIn);
-            AccountAndPassword = new AccountAndPassword() { Account = "arcsinw", Password = "1234567" };
+            AccountAndPassword = new SignInInput() { Account = "arcsinw", Password = "1234567" };
         }
-
-        private ApiService _apiService = new ApiService();
+         
 
         public async void SignIn()
         {
-            await _apiService.SignInAsync(AccountAndPassword);
+            await _apiService.SignInAsync(AccountAndPassword); 
         }
 
         /// <summary>

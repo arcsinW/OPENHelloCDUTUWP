@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelloCDUT.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,12 @@ namespace HelloCDUT.Views
         public SignUpPage()
         {
             this.InitializeComponent();
+
+            ViewModel = new SignUpViewModel();
+            DataContext = ViewModel;
         }
+
+
+        public SignUpViewModel ViewModel { get; set; }
     }
 }

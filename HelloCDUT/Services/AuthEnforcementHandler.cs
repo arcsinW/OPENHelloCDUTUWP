@@ -14,7 +14,7 @@ namespace HelloCDUT.Services
     {
         private TaskCompletionSource<bool> _contentDialogClosedTaskCompletionSource;
         private readonly ResourceLoader _resourceLoader;
-        //private TaskCompletionSource<SignInCompletionSource> _signInTaskCompletionSource;
+        private TaskCompletionSource<SignInCompletionSource> _signInTaskCompletionSource;
 
         public AuthEnforcementHandler()
         {
@@ -24,7 +24,10 @@ namespace HelloCDUT.Services
 
         private void Instance_CurrentUserChanged(object sender, User e)
         {
-            throw new NotImplementedException();
+            if (_signInTaskCompletionSource != null)
+            {
+                _signInTaskCompletionSource.SetResult(SignInCompletionSource.UserChanged);
+            }
         }
 
 

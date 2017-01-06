@@ -29,10 +29,9 @@ namespace HelloCDUT.Views
         public SignInPage()
         {
             this.InitializeComponent();
-            ViewModel = ServiceLocator.Current.GetInstance<SignInViewModel>();
-            DataContext = ViewModel;
 
-            
+            ViewModel = ServiceLocator.Current.GetInstance<SignInViewModel>();
+            DataContext = ViewModel; 
         }
 
         public SignInViewModel ViewModel { get; set; }

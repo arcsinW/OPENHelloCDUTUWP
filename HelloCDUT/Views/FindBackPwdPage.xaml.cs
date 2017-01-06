@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelloCDUT.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,11 @@ namespace HelloCDUT.Views
         public FindBackPwdPage()
         {
             this.InitializeComponent();
+
+            ViewModel = new FindBackPwdViewModel();
+            DataContext = ViewModel;
         }
+
+        public FindBackPwdViewModel ViewModel { get; set; }
     }
 }

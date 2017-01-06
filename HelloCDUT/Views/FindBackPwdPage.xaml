@@ -8,8 +8,7 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-        <SolidColorBrush x:Key="PivotHeaderForegroundSelectedBrush" Color="Red"/>
-        <SolidColorBrush x:Key="PivotHeaderForegroundUnselectedBrush" Color="AliceBlue"/>
+       
     </Page.Resources>
     
     <Grid Background="{ThemeResource PageBackgroundColorBrush}">
@@ -25,26 +24,30 @@
 
         <Grid Grid.Row="1">
             <Pivot>
-                <PivotItem Header="By AAO">
-                    <!--<PivotItem.Header>
-                        <TextBlock x:Uid="ByAAOAccount" Text="使用教务账号" />
-                    </PivotItem.Header>-->
+                <PivotItem Header="By AAO"> 
                     <StackPanel>
                         <TextBox PlaceholderText="教务系统账号 | AAO account"
+                                 Text="{Binding AAOInput.AaoAccount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                  Style="{ThemeResource LightTextBoxStyle}"/>
-                        <TextBlock/>
-                        
-                        <PasswordBox PlaceholderText="教务系统密码 | AAO password"
+                        <TextBlock Text="{Binding AAOInput.Errors[AaoAccount]}" Style="{ThemeResource WarnTextBlockStyle}"/>
+
+                        <PasswordBox PlaceholderText="教务系统密码 | AAO password" Margin="{StaticResource TextBoxPadding}"
+                                     Password="{Binding AAOInput.AaoPassword,Mode=TwoWay}"
                                      Style="{ThemeResource LightPasswordBoxStyle}"/>
-                        <TextBlock/>
-                        
-                        <PasswordBox PlaceholderText="新密码 | New password" Style="{ThemeResource LightPasswordBoxStyle}"/>
-                        <TextBlock/>
-                        
-                        <PasswordBox PlaceholderText="再次输入新密码 | New password again" Style="{ThemeResource LightPasswordBoxStyle}"/>
-                        <TextBlock/>
-                        
-                        <Button x:Uid="TryFindPwd" Style="{ThemeResource LightButtonStyle}"/>
+                        <TextBlock Text="{Binding AAOInput.Errors[AaoPassword]}" Style="{ThemeResource WarnTextBlockStyle}"/>
+
+                        <PasswordBox PlaceholderText="新密码 | New password" Margin="{StaticResource TextBoxPadding}"
+                                     Password="{Binding AAOInput.NewPassword,Mode=TwoWay}"
+                                     Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock Text="{Binding AAOInput.Errors[NewPassword]}" Style="{ThemeResource WarnTextBlockStyle}"/>
+
+                        <PasswordBox PlaceholderText="再次输入新密码 | New password again" Margin="{StaticResource TextBoxPadding}"
+                                     Password="{Binding AAOInput.NewPasswordAgain,Mode=TwoWay}"
+                                     Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock Text="{Binding AAOInput.Errors[NewPasswordAgain]}" Style="{ThemeResource WarnTextBlockStyle}"/>
+
+                        <Button x:Uid="TryFindPwd" Margin="{StaticResource TextBoxPadding}" Style="{ThemeResource LightButtonStyle}"
+                                IsEnabled="{Binding AAOInput.IsValid}"/>
                     
                     </StackPanel>
                 </PivotItem>
@@ -54,19 +57,32 @@
                         <TextBlock x:Uid="ByEmail" Text="使用邮箱" />
                     </PivotItem.Header>
                     <StackPanel>
-                        <TextBox PlaceholderText="邮箱 | Email" Style="{ThemeResource LightTextBoxStyle}"/>
-                        <TextBlock/>
-                        
-                        <TextBox PlaceholderText="验证码 | Verification code" Style="{ThemeResource LightTextBoxStyle}"/>
-                        <TextBlock/>
-                        
-                        <PasswordBox PlaceholderText="新密码 | New password" Style="{ThemeResource LightPasswordBoxStyle}"/>
-                        <TextBlock/>
-                        
-                        <PasswordBox PlaceholderText="再次输入密码 | New password again" Style="{ThemeResource LightPasswordBoxStyle}"/>
-                        <TextBlock/>
-                        
-                        <Button x:Uid="TryFindPwd" Style="{ThemeResource LightButtonStyle}"/>
+                        <TextBox PlaceholderText="邮箱 | Email" 
+                                 Text="{Binding EmailInput.Email,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                 Style="{ThemeResource LightTextBoxStyle}"/>
+                        <TextBlock Text="{Binding EmailInput.Errors[Email]}" 
+                                   Style="{ThemeResource WarnTextBlockStyle}"/>
+
+                        <TextBox PlaceholderText="验证码 | Verification code" Margin="{StaticResource TextBoxPadding}"
+                                 Text="{Binding EmailInput.VerificationCode,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                 Style="{ThemeResource LightTextBoxStyle}"/>
+                        <TextBlock Text="{Binding EmailInput.Errors[VerificationCode]}" 
+                                   Style="{ThemeResource WarnTextBlockStyle}"/>
+
+                        <PasswordBox PlaceholderText="新密码 | New password" Margin="{StaticResource TextBoxPadding}"
+                                     Password="{Binding EmailInput.NewPassword,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock Text="{Binding EmailInput.Errors[NewPassword]}" 
+                                   Style="{ThemeResource WarnTextBlockStyle}"/>
+
+                        <PasswordBox PlaceholderText="再次输入新密码 | New password again" Margin="{StaticResource TextBoxPadding}"
+                                     Password="{Binding EmailInput.NewPasswordAgain,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     Style="{ThemeResource LightPasswordBoxStyle}"/>
+                        <TextBlock Text="{Binding EmailInput.Errors[NewPasswordAgain],Mode=OneWay}" 
+                                   Style="{ThemeResource WarnTextBlockStyle}"/>
+
+                        <Button x:Uid="TryFindPwd" Margin="{StaticResource TextBoxPadding}" Style="{ThemeResource LightButtonStyle}"
+                                IsEnabled="{Binding EmailInput.IsValid}"/>
                     </StackPanel>
                 </PivotItem>
             </Pivot>

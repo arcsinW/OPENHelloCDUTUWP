@@ -21,14 +21,19 @@ namespace HelloCDUT.Services
             User response = await PostDictionary<User>(dic);
         }
 
-        public async Task SignInAsync(SignInInput accountPassword)
+        public async Task<bool> SignInAsync(SignInInput accountPassword)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("action", "userLogin");
             dic.Add("user_name", RSAEncryptHelper.PublicEncrypt(accountPassword.Account));
             dic.Add("user_password", RSAEncryptHelper.PublicEncrypt(accountPassword.Password));
             User user = await PostDictionary<User>(dic);
-            AppEnvironment.Instance.CurrentUser = user;
+            if (user != null)
+            {
+                AppEnvironment.Instance.CurrentUser = user;
+                return true;
+            }
+            return false;
         }
 
         public Task RestoreSignInStatusAsync()

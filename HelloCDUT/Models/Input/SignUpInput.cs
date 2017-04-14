@@ -40,7 +40,6 @@ namespace HelloCDUT.Models.Input
         }
 
         private string _passwordAgain;
-        [Required]
         [Compare("Password", ErrorMessage = "两次输入的密码不一致")]
         public string PasswordAgain
         {
@@ -56,7 +55,8 @@ namespace HelloCDUT.Models.Input
 
         private bool _isAccept;
         
-        [MustTrue] 
+        //[MustTrue] 
+        [Required]
         public bool IsAccept
         {
             get

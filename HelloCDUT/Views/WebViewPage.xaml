@@ -19,7 +19,7 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <WebView/>
+            <WebView x:Name="webView"/>
         </Grid>
     </Grid>
 </Page>

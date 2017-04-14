@@ -29,7 +29,11 @@ namespace HelloCDUT.ViewModels
 
         public async void SignIn()
         {
-            await _apiService.SignInAsync(AccountAndPassword); 
+            bool result = await _apiService.SignInAsync(AccountAndPassword); 
+            if(result)
+            {
+                _navigationFacade.NavigateToMainView();
+            }
         }
 
         /// <summary>
